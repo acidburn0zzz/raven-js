@@ -3,11 +3,11 @@ import uglify from 'rollup-plugin-uglify';
 import resolve from 'rollup-plugin-node-resolve';
 
 export default {
-  input: 'dist/standalone.js',
+  input: 'build/browser/src/standalone.js',
   output: {
     file: 'dist/build.min.js',
-    format: 'cjs',
-    exports: 'named',
+    format: 'iife',
+    name: 'SentryBrowser',
   },
   plugins: [
     resolve({
